@@ -25,7 +25,7 @@
 
 | 預覽5 | 預覽6 |
 |---|---|
-| ![Moneybook 簡易記帳](./image/AddItem2.jpg) | ![Moneybook 簡易記帳](./image/LeftTab.JPG) |
+| ![Moneybook 簡易記帳](./image/AddItem2.JPG) | ![Moneybook 簡易記帳](./image/LeftTab.JPG) |
 
 
 ***
