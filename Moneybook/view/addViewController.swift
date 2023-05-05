@@ -101,7 +101,7 @@ class addViewController: UIViewController {
 extension addViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return costTypes.count;
+		return incomeTypes.count;
 	};
 
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -110,7 +110,7 @@ extension addViewController: UICollectionViewDelegate, UICollectionViewDataSourc
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.cell(reuse: "addCollectionViewCell", indexPath) as? addCollectionViewCell else { return UICollectionViewCell(); };
-		let data = costTypes[indexPath.row];
+		let data = incomeTypes[indexPath.row];
 		_=cell.button
 			.img(UIImage(sys: data[1]), align: .top, gap: 10)
 			.text(data[0], color: .black, align: .center)
