@@ -1,31 +1,30 @@
-# Moneybook 簡易記帳 iOS
-
-- Swift
-- [Font Awesome 6](https://fontawesome.com/v6/search)
+![](./image/2-1.jpg)
 
 ***
 
-### Pardn Chiu 邱敬幃
+# Moneybook 簡易記帳 (iOS)
 
-- [JOBALL](https://joball.tw/@pardnltd)
-- [Linkedin](https://www.linkedin.com/in/pardnchiu/)
-- [LINE@](http://lin.ee/Gtcb5kc)
+- Swift, [Font Awesome 6](https://fontawesome.com/v6/search)
+- Pardn Chiu 邱敬幃
+- [https://joball.tw/@pardnltd](https://joball.tw/@pardnltd)
+- [https://www.linkedin.com/in/pardnchiu/](https://www.linkedin.com/in/pardnchiu/)
+- [http://lin.ee/Gtcb5kc](http://lin.ee/Gtcb5kc)
 
 ***
 
 
-| 預覽1 | 預覽2 |
+| 預覽 | 預覽 |
 |---|---|
-| ![Moneybook 簡易記帳](./image/home.png) | ![Moneybook 簡易記帳](./image/date.png) |
+| ![Moneybook 簡易記帳 (iOS)](./image/home.png) | ![Moneybook 簡易記帳 (iOS)](./image/date.png) |
 
 
-| 預覽3 | 預覽4 |
+| 預覽 | 預覽 |
 |---|---|
-| ![Moneybook 簡易記帳](./image/month.png) | ![Moneybook 簡易記帳](./image/income.png) |
+| ![Moneybook 簡易記帳 (iOS)](./image/month.png) | ![Moneybook 簡易記帳 (iOS)](./image/income.png) |
 
-| 預覽5 | 預覽6 |
+| 預覽 | 預覽 |
 |---|---|
-| ![Moneybook 簡易記帳](./image/cost.png) | ![Moneybook 簡易記帳](./image/tab.png) |
+| ![Moneybook 簡易記帳 (iOS)](./image/cost.png) | ![Moneybook 簡易記帳 (iOS)](./image/tab.png) |
 
 
 ***
