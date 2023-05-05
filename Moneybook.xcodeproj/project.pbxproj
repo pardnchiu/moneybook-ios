@@ -43,6 +43,8 @@
 		1A6CE64A2A053CDD00E4FBA6 /* addCollectionViiewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE62B2A053CDC00E4FBA6 /* addCollectionViiewCell.swift */; };
 		1A6CE64B2A053CDD00E4FBA6 /* numPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE62C2A053CDC00E4FBA6 /* numPadView.swift */; };
 		1A6CE64C2A053CDD00E4FBA6 /* calendarViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE62D2A053CDC00E4FBA6 /* calendarViewcontroller.swift */; };
+		1A6CE64E2A053FC100E4FBA6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE64D2A053FC100E4FBA6 /* Date.swift */; };
+		1A6CE6502A0540EF00E4FBA6 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6CE64F2A0540EF00E4FBA6 /* UIScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,8 @@
 		1A6CE62B2A053CDC00E4FBA6 /* addCollectionViiewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addCollectionViiewCell.swift; sourceTree = "<group>"; };
 		1A6CE62C2A053CDC00E4FBA6 /* numPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = numPadView.swift; sourceTree = "<group>"; };
 		1A6CE62D2A053CDC00E4FBA6 /* calendarViewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = calendarViewcontroller.swift; sourceTree = "<group>"; };
+		1A6CE64D2A053FC100E4FBA6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1A6CE64F2A0540EF00E4FBA6 /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				1A6CE61A2A053CDC00E4FBA6 /* UILabel.swift */,
 				1A6CE61B2A053CDC00E4FBA6 /* CAGradientLayer.swift */,
 				1A6CE61C2A053CDC00E4FBA6 /* Attribute.swift */,
+				1A6CE64D2A053FC100E4FBA6 /* Date.swift */,
+				1A6CE64F2A0540EF00E4FBA6 /* UIScrollView.swift */,
 			);
 			path = PPDExtension;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				1A6CE6382A053CDC00E4FBA6 /* UIButton.swift in Sources */,
 				1A6CE6362A053CDC00E4FBA6 /* String.swift in Sources */,
 				1A6CE6402A053CDD00E4FBA6 /* homeDayRowView.swift in Sources */,
+				1A6CE6502A0540EF00E4FBA6 /* UIScrollView.swift in Sources */,
 				1A6CE63D2A053CDC00E4FBA6 /* UILabel.swift in Sources */,
 				1A6CE63E2A053CDC00E4FBA6 /* CAGradientLayer.swift in Sources */,
 				1A6CE62F2A053CDC00E4FBA6 /* UIView.swift in Sources */,
@@ -291,6 +298,7 @@
 				1A6CE5F82A053CAF00E4FBA6 /* SceneDelegate.swift in Sources */,
 				1A6CE6422A053CDD00E4FBA6 /* tabLeftView.swift in Sources */,
 				1A6CE6332A053CDC00E4FBA6 /* UIVisualEffectView.swift in Sources */,
+				1A6CE64E2A053FC100E4FBA6 /* Date.swift in Sources */,
 				1A6CE6302A053CDC00E4FBA6 /* index.swift in Sources */,
 				1A6CE6442A053CDD00E4FBA6 /* monthCollectViewCell.swift in Sources */,
 				1A6CE6412A053CDD00E4FBA6 /* homePieView.swift in Sources */,

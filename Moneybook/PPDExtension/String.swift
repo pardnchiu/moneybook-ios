@@ -4,8 +4,8 @@
  Email: chiuchingwei@icloud.com
  */
 
-import Foundation;
-import UIKit;
+import Foundation
+import UIKit
 
 extension String {
 

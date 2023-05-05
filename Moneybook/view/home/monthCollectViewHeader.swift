@@ -1,9 +1,8 @@
-//
-//  monthCollectViewHeader.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/4.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
@@ -40,7 +39,7 @@ class monthCollectViewHeader: UICollectionReusableView {
 					.text(color: .black, align: .right)
 					.img(UIImage(sys: "arrowtriangle.forward.fill"))
 					.touch(down: self, #selector(tapNextYear))
-			])
+			]);
 	};
 	
 	required init?(coder aDecoder: NSCoder) { super.init(coder:aDecoder) };

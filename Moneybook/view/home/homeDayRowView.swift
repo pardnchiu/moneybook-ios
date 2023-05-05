@@ -1,9 +1,8 @@
-//
-//  homeDayRow.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/3.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
@@ -40,6 +39,5 @@ class homeDayRowView: UIStackView {
 				}()
 			)
 			.Weq(vw - 40);
-	}
-
+	};
 };

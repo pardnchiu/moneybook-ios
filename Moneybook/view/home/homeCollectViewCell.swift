@@ -1,19 +1,18 @@
-//
-//  homeCollectViewCell.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/4.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
 
 class homeCollectViewCell: UICollectionViewCell {
 
-	let view = UIStackView(axis: .vert, align: .left, fill: .eqSpace);
-	let headerView = UIStackView(axis: .horz, align: .fill, fill: .eqSpace);
+	let view 				= UIStackView(axis: .vert, align: .left, fill: .eqSpace);
+	let headerView 	= UIStackView(axis: .horz, align: .fill, fill: .eqSpace);
 	let headerLabel = UILabel();
-	let totalLabel = UILabel();
+	let totalLabel 	= UILabel();
 
 	override init(frame: CGRect) {
 		super.init(frame: CGRect(0, 0, 0, 0));
@@ -47,25 +46,14 @@ class homeCollectViewCell: UICollectionViewCell {
 					])
 					.border(color: .black, width: 2)
 					.radius(10)
-			])
+			]);
 
 		_=view
 			.Teq(T: contentView)
 			.Leq(L: contentView)
 			.Beq(B: contentView)
-			.Req(R: contentView)
+			.Req(R: contentView);
 	};
-
-	override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-		let att = super.preferredLayoutAttributesFitting(layoutAttributes);
-		view.setNeedsLayout();
-		view.layoutIfNeeded();
-		//		print(self.view.size.height)
-		att.frame.size.width = vw - 40;
-		//		att.frame = CGRect(x: 0, y: 0, width: vw, height: self.view.size.height)
-		return att;
-	}
-
 
 	required init?(coder aDecoder: NSCoder) { super.init(coder:aDecoder) };
 };

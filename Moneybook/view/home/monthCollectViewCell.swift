@@ -1,9 +1,8 @@
-//
-//  homeCollectViewCell.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/4.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
@@ -23,14 +22,8 @@ class monthCollectViewCell: UICollectionViewCell {
 			])
 			.radius(10)
 			.clip(view: true)
-			.border(color: .black, width: 2)
+			.border(color: .black, width: 2);
 	};
-
-//	override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-//		let att = super.preferredLayoutAttributesFitting(layoutAttributes);
-////		att.frame = CGRect(x: 0, y: 0, width: (vw - 50) / 4, height: 40)
-//		return att;
-//	}
 
 	required init?(coder aDecoder: NSCoder) { super.init(coder:aDecoder) };
 };

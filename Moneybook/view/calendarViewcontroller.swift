@@ -1,21 +1,11 @@
-//
-//  dayViewController.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/5.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
-
-extension Date {
-	var preMonth				: Date { get { return Calendar.current.date(byAdding: .month, value: -1, to: Date()) ?? Date(); } };
-	var nextMonth				: Date { get { return Calendar.current.date(byAdding: .month, value: 1, to: Date()) ?? Date(); } };
-	var startOfMonth		: Date { get { return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self))) ?? Date(); } };
-	var startOfNextMonth: Date { get { return self.nextMonth.startOfMonth } };
-	var endOfMonth			: Date { get { return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth) ?? Date(); } };
-	var endOfPreMonth		: Date { get { return self.preMonth.endOfMonth } };
-};
 
 class calendarViewcontroller: UIViewController {
 
@@ -48,20 +38,20 @@ class calendarViewcontroller: UIViewController {
 				case "Thursday"	: return 4;
 				case "Friday"		: return 5;
 				case "Saturday"	: return 6;
-				default					: return 0
+				default					: return 0;
 			};
 		}();
 
 		let lastDate: Int = {
 			let date = Date().endOfMonth;
-			let dateFormatter = DateFormatter()
+			let dateFormatter = DateFormatter();
 			dateFormatter.dateFormat = "dd";
 			return Int(dateFormatter.string(from: date)) ?? 0
 		}();
 
 		let preLastDate: Int = {
 			let date = Date().endOfPreMonth;
-			let dateFormatter = DateFormatter()
+			let dateFormatter = DateFormatter();
 			dateFormatter.dateFormat = "dd";
 			return Int(dateFormatter.string(from: date)) ?? 0
 		}();
@@ -77,17 +67,17 @@ class calendarViewcontroller: UIViewController {
 		];
 
 		for i in (preLastDate - firstDay + 1)...preLastDate {
-			list.append(["\(i)":false])
+			list.append(["\(i)":false]);
 		};
 
 		for i in 1...lastDate {
-			list.append(["\(i)":true])
+			list.append(["\(i)":true]);
 		};
 
 		let length = 7 - (list.count % 7);
 
 		for i in 1...length {
-			list.append(["\(i)":false])
+			list.append(["\(i)":false]);
 		};
 
 		let calendarCollectionViewLayout = UICollectionViewFlowLayout()._ { e in
@@ -97,6 +87,7 @@ class calendarViewcontroller: UIViewController {
 			e.scrollDirection = .vertical;
 			e.estimatedItemSize = CGSize(widrh, 35);
 		};
+
 		dateCollectionView = UICollectionView(0, 0, vw, vh, calendarCollectionViewLayout)
 			.padding(vert: 15)
 			.padding(horz: 10)
@@ -104,14 +95,14 @@ class calendarViewcontroller: UIViewController {
 			.cell(calendarCollectionViewCell.self, "calendarCollectionViewCell")
 			.bg(color: .clear);
 
-		dataTableView = UITableView()
+		dataTableView = UITableView();
 		dataTableView.delegate = self;
 		dataTableView.dataSource = self;
-		dataTableView.register(dataTableViewCell.self, forCellReuseIdentifier: "dataTableViewCell")
+		dataTableView.register(dataTableViewCell.self, forCellReuseIdentifier: "dataTableViewCell");
 
-		_ = dataTableView.bg(color: .clear)
+		_=dataTableView.bg(color: .clear)
 
-		_ = view
+		_=view
 			.child([
 				UIVisualEffectView(style: .extraLight)
 					.frame(0, 0, vw, vh),
@@ -119,28 +110,27 @@ class calendarViewcontroller: UIViewController {
 				dataTableView
 			]);
 
-		_ = dateCollectionView
+		_=dateCollectionView
 			.Teq(T: view)
 			.Leq(L: view)
 			.Req(R: view)
-			.Heq(vh)
+			.Heq(vh);
 
-		_ = dataTableView
+		_=dataTableView
 			.Leq(L: view)
 			.Req(R: view)
-			.Beq(B: view)
+			.Beq(B: view);
 	};
 
 	override func viewWillAppear(_ animated: Bool) {
-		// 更新內容高度
 		dateCollectionView.isScrollEnabled = false;
 		dateCollectionView.setNeedsLayout();
 		dateCollectionView.layoutIfNeeded();
 		dateCollectionView.removeConstraint(dateCollectionView.constraints[0])
-		_ = dateCollectionView
+		_=dateCollectionView
 			.Heq(dateCollectionView.contentSize.height + 30 /* vert padding */);
 
-		_ = dataTableView
+		_=dataTableView
 			.Teq(B: dateCollectionView)
 	}
 };
@@ -149,10 +139,6 @@ extension calendarViewcontroller: UICollectionViewDelegate, UICollectionViewData
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return list.count;
-	};
-
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: 0, height: 0);
 	};
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -167,21 +153,21 @@ extension calendarViewcontroller: UICollectionViewDelegate, UICollectionViewData
 				dateFormatter.dateFormat = "dd";
 				return Int(dateFormatter.string(from: date)) ?? 0
 			}();
-			_ = cell.button
+			_=cell.button
 				.text("\(key)")
 				.if(button: !value, { button in
-					_ = button
+					_=button
 						.text(color: .lightGray, align: .center)
 						.font(weight: .regular, size: 13)
 				})
 				.if(button: key == "\(todayDate)", { button in
-					_ = button
+					_=button
 						.text(color: .white, align: .center)
 						.font(weight: .bold, size: 15)
 						.bg(color: UIColor(hex: "F97473"))
 				})
 				.if(button: indexPath.row < 7, { button in
-					_ = button
+					_=button
 						.text(color: .black, align: .center)
 						.font(weight: .bold, size: 13)
 				})
@@ -197,20 +183,13 @@ extension calendarViewcontroller: UITableViewDelegate, UITableViewDataSource {
 		return datas.count;
 	};
 
-	func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 50;
-	};
-
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		if let cell = tableView.dequeueReusableCell(withIdentifier: "dataTableViewCell") as? dataTableViewCell {
-			let data: [String:String] = datas[indexPath.row];
-			if let title = data["title"], let price = data["price"] {
-				_=cell.titleLabel.text(title);
-				_=cell.priceLabel.text(price);
-			};
-			return cell
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "dataTableViewCell") as? dataTableViewCell else { return UITableViewCell() };
+		let data: [String:String] = datas[indexPath.row];
+		if let title = data["title"], let price = data["price"] {
+			_=cell.titleLabel.text(title);
+			_=cell.priceLabel.text(price);
 		};
-		let cell = UITableViewCell();
 		return cell;
-	}
+	};
 };

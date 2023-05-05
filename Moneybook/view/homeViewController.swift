@@ -1,9 +1,8 @@
-//
-//  homeViewController.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/2.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
@@ -103,6 +102,7 @@ class homeViewController: UIViewController {
 			e.estimatedItemSize 			= CGSize((vw - 50) / 4, 40);
 			e.headerReferenceSize 		= CGSize(vw, 60)
 		};
+
 		monthCollectView = UICollectionView(0, 0, vw, vh, monthCollectionViewLayout)
 			.proto(self, self)
 			.cell(monthCollectViewCell.self, "monthCollectViewCell")
@@ -117,6 +117,7 @@ class homeViewController: UIViewController {
 			e.scrollDirection 				= .vertical;
 			e.estimatedItemSize.width = vw
 		};
+
 		collectionView = UICollectionView(0, 0, vw, vh, homeCollectionViewLayout)
 			.proto(self, self)
 			.cell(homeCollectViewCell.self, "homeCollectViewCell");
@@ -199,7 +200,6 @@ class homeViewController: UIViewController {
 		collectionView.isScrollEnabled = false;
 		collectionView.setNeedsLayout();
 		collectionView.layoutIfNeeded();
-//		print(collectionView.frame.size.height, collectionView.contentSize.height)
 		collectionView.removeConstraint(collectionView.constraints[1])
 		_=collectionView
 			.Heq(collectionView.contentSize.height + 15 /* padding-top */ + 60 /* padding-bottom */)
@@ -240,8 +240,7 @@ class homeViewController: UIViewController {
 		_=navigationController?.view
 			.child([
 				tabLeftView
-			])
-			;
+			]);
 	};
 
 	@objc func navRightCanendar() {
@@ -255,13 +254,6 @@ class homeViewController: UIViewController {
 	};
 };
 
-extension UIScrollView {
-	func scrollToTop() {
-		let desiredOffset = CGPoint(x: 0, y: safeTop())
-		setContentOffset(desiredOffset, animated: false)
-	}
-}
-
 extension homeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -269,10 +261,6 @@ extension homeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 			return datas.count;
 		};
 		return 12;
-	};
-
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: 0, height: 0);
 	};
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -310,8 +298,7 @@ extension homeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 						};
 					};
 					return ary;
-				}())
-				;
+				}());
 			return cell
 		};
 		let cell = collectionView.cell(reuse: "monthCollectViewCell", indexPath) as? monthCollectViewCell ?? monthCollectViewCell();
@@ -325,15 +312,8 @@ extension homeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 		return cell;
 	};
 
-	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-		return CGSize(width: vw, height: 40);
-	};
-
 	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-		if let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "monthCollectViewHeader", for: indexPath) as? monthCollectViewHeader, kind == UICollectionView.elementKindSectionHeader {
-			return header;
-		};
-		let reusableview = UICollectionReusableView();
-		return reusableview;
+		guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "monthCollectViewHeader", for: indexPath) as? monthCollectViewHeader, kind == UICollectionView.elementKindSectionHeader else { return UICollectionReusableView(); };
+		return header;
 	};
 };

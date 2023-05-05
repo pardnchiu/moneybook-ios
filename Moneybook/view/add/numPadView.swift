@@ -1,9 +1,8 @@
-//
-//  numPadView.swift
-//  Maoneybook
-//
-//  Created by Pardn on 2023/5/5.
-//
+/**
+ Copyright 2023 Pardn Ltd 帕登國際有限公司.
+ Created by Pardn Chiu 邱敬幃.
+ Email: chiuchingwei@icloud.com
+ */
 
 import Foundation
 import UIKit
@@ -36,7 +35,7 @@ class numPadView: UIStackView {
 			.radius((vw - 90) / 5 / 2)
 			.border(color: .black, width: 2);
 
-		_ = self
+		_=self
 			.padding(L: 15)
 			.padding(T: 70)
 			.bg(color: bgColor)
@@ -225,7 +224,7 @@ class numPadView: UIStackView {
 				enterButton
 			]);
 
-		_ = enterButton
+		_=enterButton
 			.Beq(B: self, -safeBottom())
 			.Req(R: self, -15)
 			.Weq((vw - 90) / 5)
