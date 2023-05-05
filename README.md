@@ -21,11 +21,11 @@
 
 | 預覽3 | 預覽4 |
 |---|---|
-| ![Moneybook 簡易記帳](./image/MonthSelector.JPG) | ![Moneybook 簡易記帳](./image/AddIncome.JPG) |
+| ![Moneybook 簡易記帳](./image/MonthSelector.JPG) | ![Moneybook 簡易記帳](./image/AddIncome.jpg) |
 
 | 預覽5 | 預覽6 |
 |---|---|
-| ![Moneybook 簡易記帳](./image/AddCost.JPG) | ![Moneybook 簡易記帳](./image/LeftTab.JPG) |
+| ![Moneybook 簡易記帳](./image/AddCost.jpg) | ![Moneybook 簡易記帳](./image/LeftTab.JPG) |
 
 
 ***
