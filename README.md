@@ -6,9 +6,9 @@
 
 - Swift, [Font Awesome 6](https://fontawesome.com/v6/search)
 - Pardn Chiu 邱敬幃
-- [https://joball.tw/@pardnltd](https://joball.tw/@pardnltd)
-- [https://www.linkedin.com/in/pardnchiu/](https://www.linkedin.com/in/pardnchiu/)
-- [http://lin.ee/Gtcb5kc](http://lin.ee/Gtcb5kc)
+- [joball.tw/@pardnltd](https://joball.tw/@pardnltd)
+- [linkedin.com/in/pardnchiu](https://www.linkedin.com/in/pardnchiu)
+- [lin.ee/Gtcb5kc](http://lin.ee/Gtcb5kc)
 
 ***
 
