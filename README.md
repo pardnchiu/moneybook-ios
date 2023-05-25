@@ -5,9 +5,10 @@
 # Moneybook 簡易記帳 (iOS)
 
 - Swift, [Font Awesome 6](https://fontawesome.com/v6/search)
-- Pardn Chiu 邱敬幃
+- [github.com](https://github.com/pardnchiu/moneybook-ios)
+- [Pardn Ltd 帕登國際有限公司](https://www.linkedin.com/company/pardnltd)
+- [Pardn Chiu 邱敬幃](https://www.linkedin.com/in/pardnchiu)
 - [joball.tw/@pardnltd](https://joball.tw/@pardnltd)
-- [linkedin.com/in/pardnchiu](https://www.linkedin.com/in/pardnchiu)
 - [lin.ee/Gtcb5kc](http://lin.ee/Gtcb5kc)
 
 ***
